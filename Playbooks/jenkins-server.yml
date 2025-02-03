@@ -26,3 +26,11 @@
         name: jenkins
         state: present
         update_cache: yes
+
+    - name: Get the initial jenkins password
+      shell: cat /var/lib/jenkins/secrets/initialAdminPassword
+      register: initial_passwd
+
+    - name: show the passwd
+      debug:
+        var: initial_passwd.stdout

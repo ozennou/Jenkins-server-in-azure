@@ -10,7 +10,7 @@ variable "location" {
 
 variable "username" {
   description = "VM admin username"
-  default     = "mozennou"
+  default     = "amine"
 }
 
 variable "ssh_public_key_file" {
